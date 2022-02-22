@@ -1,0 +1,158 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(61, 19, 49, 0.3);
+  border-radius: 25px 0 25px 0;
+  box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.75);
+}
+
+.deconnection {
+  width: 10vw;
+  height: 10vh;
+  color: #eee;
+  font-size: 1.4vw;
+  border: none;
+  border-radius: 3vh 0 3vh 0;
+  background: linear-gradient(45deg, #ad78f3, #8f4fc4, #815fdffa, #4851b1fa);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 2s linear infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+  transition: all 0.75s;
+}
+
+.deconnection:hover {
+  font-size: 1.2vw;
+  background: linear-gradient(-45deg, #ad78f3, #c96cff, #ae5dd4fa, #e839fffa);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 2s linear infinite;
+  animation-direction: alternate;
+  border: none;
+  border-radius: 3vh 0 3vh 0;
+  box-shadow: 0px 0px 30px 5px #cd9aeb;
+  outline: none;
+}
+
+.logo {
+  height: 7vh;
+  width: 7vh;
+  margin: 10px;
+  margin-left: 20px;
+  border-radius: 1.75vh 0 1.75vh 0;
+  -webkit-animation: glow-box 1s ease-in-out infinite alternate;
+  -moz-animation: glow-box 1s ease-in-out infinite alternate;
+  animation: glow-box 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow-box {
+  from {
+    box-shadow: 0 0 1px #fff, 0 0 2px #774dff, 0 0 3px #774dff, 0 0 4px #5f4dff,
+      0 0 5px #5f4dff, 0 0 6px #504dff, 0 0 7px #313fff;
+  }
+  to {
+    box-shadow: 0 0 6px #fff, 0 0 12px #824dff, 0 0 18px #774dff,
+      0 0 24px #5f4dff, 0 0 30px #5f4dff, 0 0 36px #504dff, 0 0 42px #313fff;
+  }
+}
+
+nav > h2 {
+  color: whitesmoke;
+  height: 100%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 8vh;
+  font-weight: 5000;
+  margin-left: 15px;
+  padding: 20px;
+  justify-content: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+nav > h2 > span {
+  display: inline-block;
+  justify-self: center;
+  padding-top: 7.5%;
+  animation: scroll 10s infinite ease-in-out;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e60073, 0 0 4px #e60073,
+      0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+  }
+  to {
+    text-shadow: 0 0 3px #fff, 0 0 6px #ff4da6, 0 0 9px #ff4da6,
+      0 0 12px #ff4da6, 0 0 15px #ff4da6, 0 0 18px #ff4da6, 0 0 21px #ff4da6;
+  }
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ad78f3, #6049b4, #483688, #302458);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 3.5s linear infinite;
+  animation-direction: alternate;
+  z-index: 2;
+}
+
+.co-useless {
+  visibility: hidden;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.app_body {
+  display: flex;
+  background-color: #ffffff;
+  opacity: 0.75;
+  margin-top: 50px;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 5vh 1vh 5vh 1vh;
+  box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.75);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,131 @@
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  flex: 0.67;
+}
+.profile {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  height: 80vh;
+  opacity: 0.75;
+  border-radius: 0 1vh 5vh 1vh;
+  box-shadow: 10px -1px 10px 0px rgba(0, 0, 0, 0.25);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+.profile_block {
+  display: grid;
+  position: relative;
+  float: right;
+  place-items: center;
+  place-content: center;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.profile_label {
+  color: #000;
+  outline: none;
+  font-size: 2.5vh;
+  font-weight: bold;
+  margin-bottom: 2.5vh;
+  padding-top: 2vh;
+  cursor: pointer;
+  transition: 1s;
+}
+.profile_label:hover {
+  color: rgb(175, 105, 255);
+}
+.profile_label:active {
+  color: rgb(255, 0, 0);
+}
+.profile_input {
+  width: 25vw;
+  margin-bottom: 1vh;
+  padding-top: 0;
+  text-align: center;
+  align-self: center;
+  color: #000;
+  outline: none;
+  font-weight: bold;
+  border: 2px solid #4b4f77;
+  height: 4vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  font-size: 1.6rem;
+  transition: 0.25s;
+  border-radius: 1vw;
+}
+#close_button {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+}
+.rename_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25vw;
+  height: 6vh;
+  margin-bottom: 1vh;
+  padding: 0.5vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid #4b4f77;
+  transition: 0.25s;
+  border-radius: 2vw;
+}
+.rename_input {
+  width: 20vw;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  background: transparent;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+.profile_input:hover,
+.profile_input:focus,
+.rename_form:hover,
+.rename_form:focus {
+  border: rgb(175, 105, 255);
+  background-color: rgb(175, 105, 255);
+  color: #fff;
+  border-radius: 2vw 0.5vw 2vw 0.5vw;
+}
+.error {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: red;
+}
+#profile_button {
+  font-size: 30px;
+  fill: #ad78f3;
+}
+.rename_form:hover .rename_input,
+.rename_form:focus .rename_input {
+  color: #fff !important;
+}
+.rename_form:hover #profile_button {
+  fill: #fff;
+}
+#profile_button > .MuiSvgIcon-root {
+  font-size: 50px !important;
+}

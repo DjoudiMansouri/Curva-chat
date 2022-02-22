@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  font-size: 1.3rem;
+  color: #694d96;
+}
+.login {
+  display: flex;
+  justify-content: center;
+}
+#connection-container {
+  display: flex;
+  justify-content: center;
+  min-width: 420px;
+  max-width: 90%;
+  min-height: 360px;
+  max-height: 80%;
+  background: #fff;
+  border-radius: 30px 0 30px 0;
+  box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#connection-container > form {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 0;
+  padding-top: 0;
+}
+input {
+  text-align: center;
+}
+#connex-lab {
+  color: #000;
+  outline: none;
+  font-size: 30px;
+  font-weight: bold;
+  height: 30px;
+  margin-bottom: 30px;
+}
+.connex-email {
+  width: 220px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 0;
+  text-align: center;
+  align-self: center;
+  color: #000;
+  outline: none;
+  font-weight: bold;
+  border: 2px solid #4b4f77;
+  height: 30px;
+  padding-left: 17px;
+  padding-right: 17px;
+  font-size: 1.4rem;
+  transition: 0.25s;
+  border-radius: 10px;
+}
+.connex-email:hover,
+.connex-email:focus {
+  height: 45px;
+  border: rgb(175, 105, 255);
+  background-color: rgb(175, 105, 255);
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 25px 5px 25px 5px;
+}
+.connex-email:focus::placeholder {
+  visibility: hidden;
+}
+.errorMsg {
+  font-size: 16px;
+  color: red;
+  transition: all 0.5ms;
+}
+.login__button {
+  width: 160px;
+  height: 80px;
+  color: #eee;
+  font-size: 2em;
+  border: none;
+  border-radius: 25px 0 25px 0;
+  background: linear-gradient(45deg, #ad78f3, #8f4fc4, #815fdffa, #4851b1fa);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 2s linear infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.5s;
+}
+.login__button:hover,
+.login__button:focus {
+  width: 200px;
+  font-size: 3em;
+  background: linear-gradient(-45deg, #ad78f3, #c96cff, #ae5dd4fa, #e839fffa);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 2s linear infinite;
+  animation-direction: alternate;
+  border: none;
+  border-radius: 0 25px 0 25px;
+  box-shadow: 0px 0px 20px 5px #c86aff;
+  outline: none;
+}
+.pascomp {
+  font-size: 14px;
+}
+
+.inscr {
+  font-size: 17px;
+  cursor: pointer;
+  color: #e839fffa;
+  font-weight: 3000;
+  transition: all 0.25s;
+}
+.inscr:hover,
+.inscr:focus {
+  font-size: 25px;
+  color: #ffffff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  text-align: center;
+}

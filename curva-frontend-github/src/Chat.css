@@ -1,0 +1,211 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 0.67;
+}
+
+.chat_header {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  margin-left: 0.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  border-bottom: 1px solid #4b4f77;
+  border-left: 1px solid #4b4f77;
+  border-top-right-radius: 1vh;
+  border-bottom-left-radius: 5vh;
+  transition: all 0.75s;
+}
+
+.chat_header:hover {
+  border-bottom: 1px solid #ad78f3;
+  border-left: 1px solid #ad78f3;
+  background-color: #ad78f3;
+  border-top-right-radius: 1vh;
+  color: #ffffff;
+}
+
+#header_my_avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.chat_headerInfo {
+  padding-top: 1.1vh;
+  padding-bottom: 1.1vh;
+  justify-content: center;
+}
+
+.chat_headerRight > .MuiSvgIcon-root {
+  margin-right: 2vw;
+  font-size: 36px !important;
+}
+
+#chat_headerRight_icons {
+  fill: white;
+  font-size: x-large;
+}
+
+.chat_headerInfo > h1 {
+  margin-bottom: 0;
+  font-size: 3vh;
+}
+
+.chat_headerInfo > p {
+  color: #3f4047;
+}
+
+.chat_body {
+  flex: 1;
+  padding: 4.5vh;
+  overflow-y: auto;
+}
+
+.chat_message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 15px 0 15px 0;
+  background-color: #c8cae9;
+  margin-bottom: 10px;
+  display: table;
+}
+.chat_message #message_avatar {
+  position: absolute;
+  height: 3.5vh;
+  width: 3.5vh;
+  right: 100%;
+  bottom: 0%;
+  margin-right: 0.5vh;
+}
+
+.chat_message p {
+  word-break: keep-all;
+  display: table-cell;
+  vertical-align: left;
+  text-align: left;
+}
+.chat_message span {
+  font-size: 0px;
+  display: block;
+  bottom: 0;
+  left: 0;
+  transition: all 0.38s;
+}
+.chat_message:hover span {
+  display: block;
+  color: #ffffff;
+  font-size: 12px;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #e60073, 0 0 4px #e60073,
+      0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+  }
+  to {
+    text-shadow: 0 0 3px #fff, 0 0 6px #ff4da6, 0 0 9px #ff4da6,
+      0 0 12px #ff4da6, 0 0 15px #ff4da6, 0 0 18px #ff4da6, 0 0 21px #ff4da6;
+  }
+}
+.chat_message_sender {
+  color: #ffffff;
+  margin-left: auto;
+  border-radius: 0 15px 0 15px;
+  background-color: #606392;
+}
+.chat_message_sender #message_avatar {
+  position: absolute;
+  height: 3.5vh;
+  width: 3.5vh;
+  left: 100%;
+  bottom: 0%;
+  margin-left: 0.5vh;
+}
+.chat_message_sender:hover span {
+  border-radius: 12px 0 12px 0;
+  left: 59.5%;
+  top: -90%;
+}
+.chat_timestamp {
+  margin-left: 10px;
+  font-size: xx-small;
+}
+.chat_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 60px;
+  min-width: 40vw;
+  background: linear-gradient(45deg, #ad78f3, #684fc4, #081086fa, #000327fa);
+  background-size: 400% 100%;
+  position: relative;
+  animation: change 2s linear infinite;
+  animation-direction: alternate;
+  border-top-left-radius: 3.8vh;
+  border-bottom-right-radius: 4.3vh;
+}
+#chat_footer_icons {
+  fill: #ffffff;
+  font-size: xx-large;
+  transition: all 0.75s;
+}
+#chat_footer_icons:hover {
+  fill: violet;
+  font-size: 1.8vw;
+}
+.chat_footer > form {
+  flex: 1;
+  display: flex;
+}
+.chat_footer > form > input {
+  flex: 1;
+  height: 36px;
+  outline-width: 0;
+  border: none;
+  overflow-y: auto;
+  font-size: 1.8em;
+  align-self: center;
+  text-align: left;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.chat_footer > form > input::placeholder {
+  text-align: left;
+}
+*::-webkit-scrollbar {
+  width: 14px;
+}
+*::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 10px;
+}
+*::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(105, 51, 192, 0.45) transparent;
+}
